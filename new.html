@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>JS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script>
+            //Template Literals
+            const str1 = "I m a string";
+            const str2 = 'I am a string with "quotation"';
+            document.write(str1 + "<br/>");
+            document.write(str2 + "<br/>");
+            const str3 = "A new String";
+            const str4 = `I have "double quotes" in me. 'Observe', "me",here`;
+            document.write(str3 + "<br/>");
+            document.write(str4 + "<br/>");
+
+            const msg = `HI all\n
+   Good Morning.\n+
+   Today is +
+   Saturday +  
+   `;
+            document.write(msg + "<br/>");
+
+            const fname = "Saurav";
+            const lname = "Prasad";
+            document.write(`Welcome you ${fname} ${lname}`);
+
+            //Default parameters
+            function add(a = 2, b = 2) {
+                return a + b;
+            }
+
+            function mul(a = 1, b = 2, c = a + 2, d = 1 + add()) {
+                document.write(a * b + c + d);
+            }
+
+            mul();
+
+            //Spread Operators   ...    to work with arrays
+            const arr = ["Good", "Afternoon", "All"];
+            document.write(arr + "<br/>");
+
+            //copy arr1 to arr2
+            const arr1 = ["Rose", "LOtus"];
+            const arr2 = [...arr1, "Jasmine", "Hibiscus"];
+
+            document.write(arr2 + "<br/>");
+            document.write(arr1 + "<br/>");
+
+            //REST parameters
+            let func = function (...param) {
+                document.write(...(param + "<br/>"));
+            };
+            func(3);
+            func(3, 5);
+            func(3, 5, 45);
+            func(3, 5, 45, 7, 6, 98, 4534, 4564);
+
+            function add(a, b, c, d) {
+                document.write(a + b + c + d + "<br/>");
+            }
+            const arr4 = [11, 2, 3, 4, 5];
+            add(...arr4);
+        </script>
+    </head>
+
+    <body>
+        Welcome !!!
+    </body>
+
+</html>
