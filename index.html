@@ -4,53 +4,84 @@
     <head>
         <title>homepage</title>
         <link rel="stylesheet" href="styles.css">
+
+        <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script> -->
+        <script src="jquery.min.js"></script>
         <script src="myjs.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <!-- <script>
+
+            
+
+
+
+
+            $(document).ready(function () {
+                $("h1").css("color", "blue");
+
+                $("#header").hide();
+            });
+
+        </script> -->
+
         <!-- $("h1").hide(); -->
 
     </head>
 
     <body>
-        <script>
 
-            $("button").click(function () {
-
-
-            });
-
-            $("#header").css("color", "blue");
-
-
-
-            function book(name, author, pub_year) {
-                this.name = name;
-                this.author = author;
-                this.pub_year = pub_year;
-            }
-
-        </script>
-        <button id="hide_button"> click me </button>
+        <input id="hide_button" type="submit">
 
         <header id="header">this is header</header>
         <nav>this is nav bar</nav>
-        <h1 id="h1"> here comes headers</h1>
+        <h1 id="h1"> here comes headers
 
-        <table>
+            <table action="new.html">
+                <tr>
+                    <td>name</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>author</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>publish year</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>description</td>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr><input id="submit" type="button" value="submit"></tr>
 
 
-            <tr>
-                name
-            </tr>
-            <tr>
-                author
-            </tr>
-            <tr>
-                publish year
-            </tr>
 
-        </table>
+
+
+            </table>
+        </h1>
         <article>this is article</article>
         <footer>this is footer</footer>
+
+        <script>
+            $("#h1").on(
+                {
+                    "mouseout": function () {
+                            $("#h1").css("color", "red");
+                },
+                
+                    "click": function () { $("#h1").css("color", "blue")} 
+                });
+
+            $("#header").click(function(){
+                $("#h1").css("color", "red");
+            });
+
+            
+        
+        </script>
 
     </body>
 
